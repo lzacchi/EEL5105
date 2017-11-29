@@ -23,7 +23,7 @@ begin
 			count3 <= 0;
 			count4 <= 0;
 		elsif rising_edge(clk_in) then
-			if (count1 = 4999999) then
+			if (count1 = 499999999) then
 				count1 <=   0;
 				clock1 <= '1';
 			else
@@ -38,7 +38,7 @@ begin
 				clock2 <= '0';
 				count2 <= count2 + 1;
 			end if;
-			
+
 			if (count3 = 149999999) then
 				count3 <=   0;
 				clock3 <= '1';
@@ -47,13 +47,13 @@ begin
 				count3 <= count3 + 1;
 			end if;
 			
-			if (count4 <= 99999999) then
-				count4 <=   0;
-				clock4 <= '1';
-			else
-				clock4 <= '0';
-				count4 <= count4 + 1;
-			end if;
+				if (count4 = 99999999) then --99999999 
+					count4 <= 0;	
+		         clock4 <= '1';			
+				else 
+				   clock4 <= '0';
+					count4 <= count4 + 1;
+				end if;
 			
 			-- SELECTOR --
 			if (selector = "00") then
