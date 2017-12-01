@@ -37,7 +37,7 @@ architecture jogo_top of jogo is
 			  display2 : out std_logic_vector(6 downto 0);
 			  display3 : out std_logic_vector(6 downto 0);
 			  display4 : out std_logic_vector(6 downto 0);
-			  paying	  : out std_logic);
+			  playing	  : out std_logic);
 	end component;
 	
 	component fsm is
